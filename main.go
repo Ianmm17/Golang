@@ -7,6 +7,10 @@ import (
 
 func main() {
 	fmt.Println("Go Practice!")
-	addedOdd := practice.AddOddNumbers(1, 150)
-	println(addedOdd)
+	addedOdd, err := practice.AddOddNumbers(222, 150)
+	if err != nil {
+		println(err.Error())
+	} else {
+		println(addedOdd)
+	}
 }
