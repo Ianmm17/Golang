@@ -100,3 +100,20 @@ func MinToSec(min int) int {
 func HrToSec(hr int) int {
 	return hr * 3600
 }
+
+func CalcFactorial(num int) int {
+	factorial := 1
+	for i := 1; i <= num; i++ {
+		factorial = factorial * i
+	}
+	return factorial
+}
+
+func RecursiveFactorial(num int) int {
+	if num == 0 || num == 1 {
+		return 1
+	} else {
+		return num * RecursiveFactorial(num-1)
+	}
+
+}

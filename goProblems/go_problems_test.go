@@ -1,6 +1,7 @@
 package goProblems
 
 import (
+	"fmt"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
@@ -46,15 +47,15 @@ func TestCollectionSliceInt(t *testing.T) {
 
 		assert.Equal(t, expected, actual)
 	})
-	/*t.Run("handles empty slice", func(t *testing.T) {
+	t.Run("handles empty slice", func(t *testing.T) {
 		var nums []int
 
-		expected := []int{}
+		var expected []int
 		fmt.Println(expected)
 		actual := CollectionSliceInt(nums)
 
 		assert.Equal(t, expected, actual)
-	})*/
+	})
 }
 
 func TestDoWeMatch(t *testing.T) {
@@ -213,6 +214,28 @@ func TestConvertToSeconds(t *testing.T) {
 		expected := 3660
 
 		actual := ConvertToSeconds(hour, min)
+
+		assert.Equal(t, expected, actual)
+	})
+}
+
+func TestCalcFactorial(t *testing.T) {
+	t.Run("calculate factorial", func(t *testing.T) {
+		num := 4
+
+		expected := 24
+
+		actual := CalcFactorial(num)
+
+		assert.Equal(t, expected, actual)
+	})
+
+	t.Run("calculates factorial using recursion", func(t *testing.T) {
+		num := 4
+
+		expected := 24
+
+		actual := RecursiveFactorial(num)
 
 		assert.Equal(t, expected, actual)
 	})
